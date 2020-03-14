@@ -70,9 +70,9 @@ export default class Commands extends React.Component {
         <div className="input-fields">
           <div className="row">
             <button onClick={this.onPlace} disabled={this.hasError}>Place</button>
-            <input data-has-error={this.xHasError} onChange={this.onChange.bind(this, 'x')} />
-            <input data-has-error={this.yHasError} onChange={this.onChange.bind(this, 'y')} />
-            <input data-has-error={this.orientationHasError} onChange={this.onChange.bind(this, 'orientation')} />
+            <input data-has-error={this.xHasError} onChange={this.onChange.bind(this, 'x')} placeholder="0 - 5" />
+            <input data-has-error={this.yHasError} onChange={this.onChange.bind(this, 'y')} placeholder="0 - 5" />
+            <input data-has-error={this.orientationHasError} onChange={this.onChange.bind(this, 'orientation')} placeholder="N | S | E | W" />
           </div>
           <div className="row">
             <button disabled={!robotCanReceiveCommands} onClick={this.onLeft}>Left</button>
