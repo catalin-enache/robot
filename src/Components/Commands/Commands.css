@@ -1,0 +1,32 @@
+.commands {
+    display: flex;
+    justify-content: center;
+}
+
+.input-fields button, .input-fields input, .report {
+    width: 100px;
+    display: inline-block;
+    font-size: 12px;
+    outline: none;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    margin: 0 0 -1px -1px;
+    padding: 0.2em;
+    background-color: transparent;
+
+}
+
+.input-fields button {
+    background-color: dimgrey;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.input-fields button[disabled] {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.input-fields input[data-has-error=true] {
+    color: red;
+}
