@@ -1,9 +1,8 @@
 import React from 'react';
-import './Stage.css';
-
 import Table from '../Table/Table';
 import Commands from '../Commands/Commands'
 import RobotBrain from '../../Logic/RobotBrain';
+import './Stage.css';
 
 export default class Stage extends React.PureComponent {
   constructor(props) {
@@ -17,6 +16,12 @@ export default class Stage extends React.PureComponent {
     this.onMove = this.onMove.bind(this);
   }
 
+  /**
+   *
+   * @param x {string | number}
+   * @param y {string | number}
+   * @param orientation {string}
+   */
   onPlace({ x, y, orientation}) {
     this.robotBrain.x = x;
     this.robotBrain.y = y;

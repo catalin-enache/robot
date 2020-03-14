@@ -9,6 +9,11 @@ export default class RobotBrain {
     this._orientation = null;
   }
 
+  /**
+   *
+   * @return {Readonly<{N: string, S: string, E: string, W: string}>}
+   * @constructor
+   */
   static get ORIENTATIONS() {
     return Object.freeze({
       N: 'N',
@@ -18,38 +23,91 @@ export default class RobotBrain {
     });
   }
 
+  /**
+   *
+   * @return {string | null}
+   */
   get orientation() { return this._orientation; }
 
+  /**
+   *
+   * @return {number | null}
+   */
   get x() { return this._x; }
 
+  /**
+   *
+   * @return {number | null}
+   */
   get y() { return this._y; }
 
+  /**
+   *
+   * @param value {string}
+   */
   set orientation(value) { if (this.isValidOrientation(value)) this._orientation = value.toUpperCase(); }
 
+  /**
+   *
+   * @param value {string | number}
+   */
   set x(value) { if (this.isValidX(value)) this._x = +value; }
 
+  /**
+   *
+   * @param value {string | number}
+   */
   set y(value) { if (this.isValidY(value)) this._y = +value; }
 
+  /**
+   *
+   * @return {string}
+   */
   get report() {
     return (this.canReceiveCommands && `${this.x}, ${this.y}, ${this.orientation}`) || '';
   }
 
+  /**
+   *
+   * @return {boolean}
+   */
   get canReceiveCommands() {
-    return !!this.orientation;
+    return !!this.orientation && this.x !== null && this.y !== null;
   }
 
+  /**
+   *
+   * @param value {string}
+   * @return {boolean}
+   */
   isValidOrientation(value) {
     return value.toUpperCase() in this.constructor.ORIENTATIONS;
   }
 
+  /**
+   *
+   * @param value {string | number}
+   * @return {boolean}
+   */
   isValidX(value) {
     return this.isValidCoordinate('x', value);
   }
 
+  /**
+   *
+   * @param value {string | number}
+   * @return {boolean}
+   */
   isValidY(value) {
     return this.isValidCoordinate('y', value);
   }
 
+  /**
+   *
+   * @param coord {string}
+   * @param value {string | number}
+   * @return {boolean}
+   */
   isValidCoordinate(coord, value) {
     const size = coord === 'x' ? this.tableWidth : this.tableHeight;
     const valueAsNumber = +value;

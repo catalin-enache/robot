@@ -12,9 +12,6 @@ export default class Commands extends React.Component {
       orientation: '',
     };
     this.onPlace = this.onPlace.bind(this);
-    this.onLeft = this.onLeft.bind(this);
-    this.onRight = this.onRight.bind(this);
-    this.onMove = this.onMove.bind(this);
   }
 
   onChange(name, evt) {
@@ -30,17 +27,6 @@ export default class Commands extends React.Component {
     }
   }
 
-  onLeft() {
-    this.props.onLeft();
-  }
-
-  onRight() {
-    this.props.onRight();
-  }
-
-  onMove() {
-    this.props.onMove();
-  }
 
   get robotBrain() {
     return this.props.robotBrain;
@@ -75,9 +61,9 @@ export default class Commands extends React.Component {
             <input data-has-error={this.orientationHasError} onChange={this.onChange.bind(this, 'orientation')} placeholder="N | S | E | W" />
           </div>
           <div className="row">
-            <button disabled={!robotCanReceiveCommands} onClick={this.onLeft}>Left</button>
-            <button disabled={!robotCanReceiveCommands} onClick={this.onRight}>Right</button>
-            <button disabled={!robotCanReceiveCommands} onClick={this.onMove}>Move</button>
+            <button disabled={!robotCanReceiveCommands} onClick={this.props.onLeft}>Left</button>
+            <button disabled={!robotCanReceiveCommands} onClick={this.props.onRight}>Right</button>
+            <button disabled={!robotCanReceiveCommands} onClick={this.props.onMove}>Move</button>
             <div className="report">{this.robotBrain.report || '-'}</div>
           </div>
         </div>

@@ -4,6 +4,13 @@ import './Table.css';
 
 
 export default class Table extends React.Component {
+
+  /**
+   *
+   * @param y {number}
+   * @param x {number}
+   * @return {ReactElement}
+   */
   renderRobot(y, x) {
     const { robotBrain } = this.props;
     const rotation =
@@ -16,8 +23,9 @@ export default class Table extends React.Component {
     }
     return <div>*</div>;
   }
+
   render() {
-    const { width, height, robotBrain } = this.props;
+    const { width, height } = this.props;
 
     return (
       <div className="table">
