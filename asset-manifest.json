@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/robot/static/css/main.ccad2760.chunk.css",
-    "main.js": "/robot/static/js/main.5c970eeb.chunk.js",
-    "main.js.map": "/robot/static/js/main.5c970eeb.chunk.js.map",
+    "main.js": "/robot/static/js/main.3a6d5349.chunk.js",
+    "main.js.map": "/robot/static/js/main.3a6d5349.chunk.js.map",
     "runtime-main.js": "/robot/static/js/runtime-main.f352755f.js",
     "runtime-main.js.map": "/robot/static/js/runtime-main.f352755f.js.map",
     "static/js/2.ca1e7e46.chunk.js": "/robot/static/js/2.ca1e7e46.chunk.js",
     "static/js/2.ca1e7e46.chunk.js.map": "/robot/static/js/2.ca1e7e46.chunk.js.map",
     "index.html": "/robot/index.html",
-    "precache-manifest.f676c9da21b3d8a03fe3d7dbf1d02465.js": "/robot/precache-manifest.f676c9da21b3d8a03fe3d7dbf1d02465.js",
+    "precache-manifest.1a4a1dd5f91457ed17083f30db1041ae.js": "/robot/precache-manifest.1a4a1dd5f91457ed17083f30db1041ae.js",
     "service-worker.js": "/robot/service-worker.js",
     "static/css/main.ccad2760.chunk.css.map": "/robot/static/css/main.ccad2760.chunk.css.map",
     "static/js/2.ca1e7e46.chunk.js.LICENSE.txt": "/robot/static/js/2.ca1e7e46.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f352755f.js",
     "static/js/2.ca1e7e46.chunk.js",
     "static/css/main.ccad2760.chunk.css",
-    "static/js/main.5c970eeb.chunk.js"
+    "static/js/main.3a6d5349.chunk.js"
   ]
 }
